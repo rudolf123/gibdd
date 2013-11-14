@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{10482E7E-FD8F-490D-9D7F-10F940279BA6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GibddTrainer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\bin\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeaderFile>Precompiled.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>../dep/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zm145 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\dep\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>OIS.lib;Ogremain.lib;MyGUIEngine.lib;MyGUI.OgrePlatform.lib;NxCharacter.lib;NxCooking.lib;PhysXLoader.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>
+      </IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\ActionManager.cpp" />
+    <ClCompile Include="..\src\AIManager.cpp" />
+    <ClCompile Include="..\src\Bot.cpp" />
+    <ClCompile Include="..\src\BotDriver.cpp" />
+    <ClCompile Include="..\src\CameraEx.cpp" />
+    <ClCompile Include="..\src\Character.cpp" />
+    <ClCompile Include="..\src\CharacterController.cpp" />
+    <ClCompile Include="..\src\Database\DBCFileLoader.cpp" />
+    <ClCompile Include="..\src\Database\DBCStores.cpp" />
+    <ClCompile Include="..\src\DebugState.cpp" />
+    <ClCompile Include="..\src\dotSceneParser.cpp" />
+    <ClCompile Include="..\src\DynamicLines.cpp" />
+    <ClCompile Include="..\src\DynamicRenderable.cpp" />
+    <ClCompile Include="..\src\EngineSolver.cpp" />
+    <ClCompile Include="..\src\GameObject.cpp" />
+    <ClCompile Include="..\src\GameplaySettings.cpp" />
+    <ClCompile Include="..\src\Graph.cpp" />
+    <ClCompile Include="..\src\Level.cpp" />
+    <ClCompile Include="..\src\LevelLoader.cpp" />
+    <ClCompile Include="..\src\Main.cpp" />
+    <ClCompile Include="..\src\MenuState.cpp" />
+    <ClCompile Include="..\src\PhysicManager.cpp" />
+    <ClCompile Include="..\src\Player.cpp" />
+    <ClCompile Include="..\src\PlayerManager.cpp" />
+    <ClCompile Include="..\src\PlayState.cpp" />
+    <ClCompile Include="..\src\Policies\ObjectLifeTime.cpp" />
+    <ClCompile Include="..\src\Precompiled.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\src\Profile.cpp" />
+    <ClCompile Include="..\src\ProfileManager.cpp" />
+    <ClCompile Include="..\src\Ragdoll.cpp" />
+    <ClCompile Include="..\src\Root.cpp" />
+    <ClCompile Include="..\src\SettingsLoader\SettingsLoader.cpp" />
+    <ClCompile Include="..\src\SettingsLoader\VideoSettings.cpp" />
+    <ClCompile Include="..\src\SimaforeSystem.cpp" />
+    <ClCompile Include="..\src\Stream.cpp" />
+    <ClCompile Include="..\src\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="..\src\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="..\src\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="..\src\UserAllocator.cpp" />
+    <ClCompile Include="..\src\UserData.cpp" />
+    <ClCompile Include="..\src\Vehicle.cpp" />
+    <ClCompile Include="..\src\Wheel.cpp" />
+    <ClCompile Include="..\src\WPManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\ActionManager.h" />
+    <ClInclude Include="..\src\AIManager.h" />
+    <ClInclude Include="..\src\Bot.h" />
+    <ClInclude Include="..\src\BotDriver.h" />
+    <ClInclude Include="..\src\CameraEx.h" />
+    <ClInclude Include="..\src\Character.h" />
+    <ClInclude Include="..\src\Classes.h" />
+    <ClInclude Include="..\src\CharacterController.h" />
+    <ClInclude Include="..\src\configAnims.h" />
+    <ClInclude Include="..\src\Database\DBCEnums.h" />
+    <ClInclude Include="..\src\Database\DBCFileLoader.h" />
+    <ClInclude Include="..\src\Database\DBCfmt.h" />
+    <ClInclude Include="..\src\Database\DBCStore.h" />
+    <ClInclude Include="..\src\Database\DBCStores.h" />
+    <ClInclude Include="..\src\Database\DBCStructure.h" />
+    <ClInclude Include="..\src\DebugState.h" />
+    <ClInclude Include="..\src\Defines.h" />
+    <ClInclude Include="..\src\dotSceneParser.h" />
+    <ClInclude Include="..\src\DynamicLines.h" />
+    <ClInclude Include="..\src\DynamicRenderable.h" />
+    <ClInclude Include="..\src\EngineSolver.h" />
+    <ClInclude Include="..\src\GameObject.h" />
+    <ClInclude Include="..\src\GameplaySettings.h" />
+    <ClInclude Include="..\src\Gear.h" />
+    <ClInclude Include="..\src\GearDesc.h" />
+    <ClInclude Include="..\src\Graph.h" />
+    <ClInclude Include="..\src\Level.h" />
+    <ClInclude Include="..\src\LevelLoader.h" />
+    <ClInclude Include="..\src\MenuState.h" />
+    <ClInclude Include="..\src\Motor.h" />
+    <ClInclude Include="..\src\MotorDesc.h" />
+    <ClInclude Include="..\src\NxLinearInterpolationValues.h" />
+    <ClInclude Include="..\src\NxWheelDesc.h" />
+    <ClInclude Include="..\src\PhysicManager.h" />
+    <ClInclude Include="..\src\Player.h" />
+    <ClInclude Include="..\src\PlayerManager.h" />
+    <ClInclude Include="..\src\PlayState.h" />
+    <ClInclude Include="..\src\Policies\CreationPolicy.h" />
+    <ClInclude Include="..\src\Policies\ObjectLifeTime.h" />
+    <ClInclude Include="..\src\Policies\Singleton.h" />
+    <ClInclude Include="..\src\Policies\SingletonImp.h" />
+    <ClInclude Include="..\src\Policies\ThreadingModel.h" />
+    <ClInclude Include="..\src\Precompiled.h" />
+    <ClInclude Include="..\src\Profile.h" />
+    <ClInclude Include="..\src\ProfileManager.h" />
+    <ClInclude Include="..\src\Ragdoll.h" />
+    <ClInclude Include="..\src\Root.h" />
+    <ClInclude Include="..\src\SettingsLoader\Settings.h" />
+    <ClInclude Include="..\src\SettingsLoader\SettingsLoader.h" />
+    <ClInclude Include="..\src\SettingsLoader\VideoSettings.h" />
+    <ClInclude Include="..\src\SimaforeSystem.h" />
+    <ClInclude Include="..\src\State.h" />
+    <ClInclude Include="..\src\Stream.h" />
+    <ClInclude Include="..\src\tinyxml\tinyxml.h" />
+    <ClInclude Include="..\src\UserAllocator.h" />
+    <ClInclude Include="..\src\UserData.h" />
+    <ClInclude Include="..\src\Util.h" />
+    <ClInclude Include="..\src\Vehicle.h" />
+    <ClInclude Include="..\src\VehicleDesc.h" />
+    <ClInclude Include="..\src\Wheel.h" />
+    <ClInclude Include="..\src\WPManager.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
